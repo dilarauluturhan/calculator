@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.2rem;
+}
+
+.calculator {
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    width: 400px;
+    position: absolute;
+    top: 50%; /*top, left ve transform'u ortalamak için kullandım*/
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.calculator-input {
+    width: 100%;
+    height: 70px;
+    font-size: 4rem;
+    border: none;
+    background-color: #252525;
+    color: #fff;
+    text-align: right;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+button {
+    height: 50px;
+    background-color: #fff;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid #c4c4c4;
+    font-size: 2.5rem;
+    color: #5d3891;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+.operator {
+    color: #6096b4;
+}
+
+.clear {
+    background-color: #674188;
+    border-color: #674188;
+    color: #fff;
+}
+
+.clear:hover {
+    background-color: #c3acd0;
+}
+
+.equal-sign {
+    background-color: #6096b4;
+    border-color: #6096b4;
+    color: #fff;
+    height: 100%;
+    grid-area: 2/4/6/5; /*2. satır ve 4. kolondan başla, 6. satır ve 5. kolonda bitir dedim*/
+}
+
+.equal-sign:hover {
+    background-color: #93bfcf;
+
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*4'lü sıralamak için kullandım, 1fr eşit oranda dağıt demek*/
+    grid-gap: 20px;
+    padding: 20px;
+}
